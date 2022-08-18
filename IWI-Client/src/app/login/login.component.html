@@ -1,0 +1,23 @@
+<div
+	 class="outter_wrapper">
+	<form [formGroup]="loginForm"
+		  (ngSubmit)="login()">
+		<div class="form-container">
+			<legend>
+				<p>Diego & Johana</p>
+			</legend>
+			<div class="mb-3">
+				<label for="disabledTextInput" class="form-label">Para ver la invitación ingresa tu celular</label>
+				<div class="input_button">
+
+					<input formControlName="phone"
+						   type="text"
+						   class="form-control"
+						   placeholder="Ingresa tu celular">
+					<button type="submit" class="btn btn-secondary">►</button>
+				</div>
+			</div>
+
+		</div>
+	</form>
+</div>

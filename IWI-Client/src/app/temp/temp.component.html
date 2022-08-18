@@ -1,0 +1,32 @@
+<div *ngIf="fromDialog==false" class="outter_wrapper">
+	<div class="img">
+		<img src="../../assets/img/rings-placeholder.png" alt="">
+	</div>
+
+	<div class="msg_count_wrapper">
+		<div class="message radius text-center">
+			Nuestro momento especial comienza en:
+		</div>
+
+		<div class="time-countdown">
+			<ul>
+				<li class="count-bg-one radius"><span id="days">{{day}}</span>Dias</li>
+				<li class="count-bg-two radius"><span id="hours">{{hours}}</span>Horas</li>
+				<li class="count-bg-three radius"><span id="minutes">{{minutes}}</span>Minutos</li>
+				<li class="count-bg-four radius"><span id="seconds">{{seconds}}</span>Segundos</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div *ngIf="fromDialog==true" class="outter_wrapper_s">
+
+	<div class="time-countdown_s">
+		<ul>
+			<li class="count-bg-one_s radius"><span id="days">{{day}}</span>Dias</li>
+			<li class="count-bg-two_s radius"><span id="hours">{{hours}}</span>Horas</li>
+			<li class="count-bg-three_s radius"><span id="minutes">{{minutes}}</span>Minutos</li>
+			<li class="count-bg-four_s radius"><span id="seconds">{{seconds}}</span>Segundos</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,42 @@
+/* Global Variables */
+
+:root {
+	--background-main-color: white;
+	--background-secondary-color: rgba(218, 165, 32, 0.2);
+	--img-border-color: goldenrod;
+	--general-text-font: 'Cormorant Garamond', serif;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	background: rgba(218, 165, 32, 0.1);
+	font-family: var(--general-text-font);
+	scroll-behavior: smooth;
+}
+
+img {
+	max-height: 400px;
+	object-fit: cover;
+}
+
+::ng-deep app-component {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+.custom-dialog-container .mat-dialog-container {
+	display: flex;
+	align-items: flex-end;
+	padding: 0;
+	background-image: url("assets/img/index.jpg");
+	background-position: center;
+	/* Center the image */
+	background-repeat: no-repeat;
+	/* Do not repeat the image */
+	background-size: cover;
+	/* Resize the background image to cover the entire container */
+}

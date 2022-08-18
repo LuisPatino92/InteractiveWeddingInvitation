@@ -1,0 +1,41 @@
+<nav *ngIf="logged" class="navbar navbar-expand">
+
+  <div class="container-fluid nav_wrapper">
+    <div class="img_wrapper">
+      <img src="../../assets/img/Logo_DyJ.jpg" alt="">
+    </div>
+    <ul class="navbar-nav">
+      <li routerLink='inicio'
+          routerLinkActive="active"
+          class="nav-item">
+        Inicio
+      </li>
+      <li routerLink='historia'
+          routerLinkActive="active"
+          class="nav-item">
+        Nosotros
+      </li>
+
+      <li routerLink='codigovestuario'
+          routerLinkActive="active"
+          class="nav-item">
+        Vestuario
+      </li>
+
+      <li routerLink='ubicacion'
+          routerLinkActive="active"
+          class="nav-item">
+        Ubicación
+      </li>
+      <li routerLink='confirmar'
+          routerLinkActive="active"
+          class="nav-item">
+        Confirmación
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="outlet_wrapper">
+  <router-outlet></router-outlet>
+</div>

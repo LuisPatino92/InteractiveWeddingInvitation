@@ -1,0 +1,42 @@
+<div class="container-fluid">
+	<app-temp [fromDialog]="false"></app-temp>
+
+	<div class="row first">
+
+		<div
+			 class="form_outter_wrapper col-lg-6">
+			<form (submit)="submitConfirmation()"
+				  [formGroup]="confirmationForm">
+				<fieldset>
+					<legend>Por favor confirma tu asistencia</legend>
+
+					<div class="wrapper">
+
+						<div class="guest">
+							<input formControlName="confirmed" type="checkbox">
+							<label for="disabledTextInput" class="form-label">{{user.name}}</label>
+						</div>
+
+
+						<ng-container formArrayName="companions">
+							<ng-container *ngFor="let companionForm of companions.controls; let i = index">
+								<div class="guest" [formGroup]="companionForm">
+									<input formControlName="confirmed" type="checkbox">
+									<label class="form-label"> {{companionForm.value["name"]}}</label>
+								</div>
+
+
+							</ng-container>
+						</ng-container>
+
+					</div>
+
+					<button class="btn" type="submit">Confirmar</button>
+				</fieldset>
+			</form>
+		</div>
+
+
+	</div>
+
+	<!-- <pre>{{confirmationForm.value | json}}</pre> -->

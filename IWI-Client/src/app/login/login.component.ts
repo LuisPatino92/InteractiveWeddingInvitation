@@ -1,0 +1,40 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { CentralService } from '../services/central.service';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+
+
+  public loginForm: FormGroup;
+
+  public authorizedPhones = ['350'];
+
+  constructor(
+    private fb: FormBuilder,
+    private centralService: CentralService,
+    private router: Router,
+  ) { }
+
+  ngOnInit() {
+    this.loginForm = this.fb.group({
+      phone: [''],
+
+    });
+  }
+
+  public login() {
+    this.centralService.checkUser(this.loginForm.controls.phone.value).subscribe((x) => {
+
+      this.router.navigate(['/inicio']);
+    }
+
+    );
+  }
+
+}

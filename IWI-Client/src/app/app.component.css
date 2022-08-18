@@ -1,0 +1,225 @@
+@media (max-width: 850px) {
+	.img_wrapper {
+		display: none;
+	}
+
+}
+
+@media (max-width: 600px) {
+
+	ul>li {
+		margin: 0 15px !important;
+		padding: 2px;
+		font-size: 0.9rem;
+	}
+
+	::ng-deep app-index {
+		top: 51px !important;
+	}
+
+	::ng-deep app-history {
+		top: 51px !important;
+	}
+
+	::ng-deep app-dress {
+		top: 51px !important;
+	}
+
+	::ng-deep app-location {
+		top: 51px !important;
+	}
+
+	::ng-deep app-confirmation {
+		top: 51px !important;
+	}
+
+	::ng-deep app-login {
+		top: 51px !important;
+	}
+}
+
+@media (max-width: 500px) {
+
+
+	ul>li {
+		margin: 0 !important;
+		padding: 1px;
+	}
+
+	::ng-deep app-index {
+		top: 48px !important;
+	}
+
+	::ng-deep app-history {
+		top: 48px !important;
+	}
+
+	::ng-deep app-dress {
+		top: 48px !important;
+	}
+
+	::ng-deep app-location {
+		top: 48px !important;
+	}
+
+	::ng-deep app-confirmation {
+		top: 48px !important;
+	}
+
+	::ng-deep app-login {
+		top: 48px !important;
+	}
+}
+
+
+.img_wrapper {
+	position: absolute;
+	left: 0;
+	vertical-align: middle;
+	height: 44px;
+}
+
+img {
+	height: 44px !important;
+	overflow: hidden;
+}
+
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px;
+	border: 0.5px gray solid;
+	border-radius: 20px;
+}
+
+fieldset {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+legend {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+nav {
+	z-index: 1000;
+	display: block;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	margin: 0;
+	padding: 0;
+}
+
+
+.nav_wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 10px 0 0 0;
+	background-color: white;
+	border-bottom: 2px goldenrod solid;
+}
+
+
+.nav_links {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+ul>li {
+	height: 100%;
+	margin: 0 20px;
+	padding: 10px;
+	-webkit-appearance: none;
+	outline: none;
+}
+
+li:hover {
+	cursor: pointer;
+}
+
+.active {
+	font-weight: 900;
+	border-radius: 10px 10px 0 0;
+	border-right: 2px solid goldenrod;
+	border-left: 2px solid goldenrod;
+
+}
+
+.outlet_wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-item {
+	font-family: var(--general-text-font);
+	font-style: italic;
+}
+
+::ng-deep app-index {
+	position: absolute;
+	width: 100%;
+	top: 56px !important;
+}
+
+::ng-deep app-history {
+	position: absolute;
+	width: 100%;
+	top: 56px;
+}
+
+::ng-deep app-dress {
+	position: absolute;
+	width: 100%;
+	top: 56px;
+}
+
+::ng-deep app-location {
+	position: absolute;
+	width: 100%;
+	top: 56px;
+}
+
+::ng-deep app-confirmation {
+	position: absolute;
+	width: 100%;
+	top: 56px;
+}
+
+::ng-deep app-login {
+	position: absolute;
+	width: 100%;
+	top: 56px;
+}

@@ -1,0 +1,82 @@
+.outter_wrapper {
+	height: 600px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: calc(50vh - 350px);
+}
+
+form {
+	width: 350px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: 30px;
+	border: 3px goldenrod solid;
+	border-radius: 20px;
+	background-image: url("../../assets/img/menuhistoria.jpeg");
+	min-height: 100%;
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 40%;
+	position: relative;
+	top: 100px;
+}
+
+fieldset {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100%;
+	justify-content: space-between;
+}
+
+legend {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+
+}
+
+legend>p {
+	font-family: 'Great Vibes', cursive;
+	margin: 0;
+	font-size: 2.5rem;
+	font-weight: 800;
+	color: white;
+	text-shadow: -2px -2px 2px #000, 1px -1px 0 rgb(126, 124, 124), -3px 3px 0 rgb(17, 17, 17), 2px 2px 0 rgb(102, 68, 68);
+
+}
+
+label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: beige;
+}
+
+input {
+	text-align: center;
+}
+
+.input_button {
+	display: flex;
+	flex-direction: row;
+}
+
+button {
+	font-size: large;
+}
