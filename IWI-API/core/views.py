@@ -61,3 +61,33 @@ def confirm(request):
 
     return HttpResponse(json.dumps(json_to_response),
                         content_type="application/json")
+
+
+@csrf_exempt
+def set_guests(request):
+
+    data = json.loads(request.body)
+
+    for guest in data:
+        guest_number = [*guest.keys()][0]
+        guest_name = guest[guest_number]
+        try:
+
+            guest_model = Guest.objects.get(cellphone=guest_number)
+            Companion.objects.create(name=guest_name,
+                                     confirmed=False,
+                                     guest=guest_model)
+        except:
+            Guest.objects.create(cellphone=guest_number,
+                                 name=guest_name,
+                                 confirmed=False)
+    return HttpResponse()
+
+
+# @csrf_exempt
+# def check_status(request):
+
+#     companions = Companion.objects.all()
+#     guests = Guest.objects.all()
+
+#     return HttpResponse()

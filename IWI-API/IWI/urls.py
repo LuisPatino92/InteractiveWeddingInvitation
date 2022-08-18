@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from core.views import get_guest, confirm
+from core.views import get_guest, confirm, set_guests
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('getguest/', get_guest),
     path('confirm/', confirm),
+    path('setguests/', set_guests),
 ]
