@@ -5,25 +5,8 @@
 export const environment = {
   production: false,
 
-  apiUrl: 'http://localhost:8000',
+  apiUrl: 'http://localhost:8000/api',
 
-  authorized_numbers: ['3505559154', '3043963973', '3217044082'],
-  authorized_users: {
-    '3505559154': {
-      guest: 'Lucho',
-      companion: ['Tefa', 'Tita']
-    },
-
-    '3043963973': {
-      guest: 'Alejo',
-      companion: ['Stefhania']
-    },
-
-    '3217044082': {
-      guest: 'Mi mamá teresa',
-      companion: ['Inv1', 'Zurdo', 'Johanna', 'Otro']
-    }
-  }
 };
 
 /*

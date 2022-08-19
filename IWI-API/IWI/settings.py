@@ -50,6 +50,14 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
+ALLOWED_HOSTS = [
+    "www.diegoyjohana.com", "diegoyjohana.com", "localhost", "127.0.0.1",
+    "0.0.0.0"
+]
+CORS_ORIGIN_WHITELIST = [
+    "https://www.diegoyjohana.com", "https://diegoyjohana.com",
+    "http://localhost:4200", "http://127.0.0.1:4200", "http://0.0.0.0:4200"
+]
 
 ROOT_URLCONF = 'IWI.urls'
 

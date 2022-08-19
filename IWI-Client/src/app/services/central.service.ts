@@ -26,7 +26,7 @@ export class CentralService {
     if (phoneInLS) {
       this.checkUser(phoneInLS)
         .subscribe((x) => {
-          this.router.navigate(['/historia'])
+          this.router.navigate(['/inicio'])
         })
     } else {
       this.router.navigate(['/'])
@@ -47,7 +47,7 @@ export class CentralService {
       .pipe(map(x => {
         this.setCurrentUser(x);
 
-        this.setWithExpiry('phone', phone, 60000);
+        this.setWithExpiry('phone', phone, 600000);
 
 
       }))
