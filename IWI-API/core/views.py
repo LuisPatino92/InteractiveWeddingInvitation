@@ -84,10 +84,41 @@ def set_guests(request):
     return HttpResponse()
 
 
-# @csrf_exempt
-# def check_status(request):
+@csrf_exempt
+def get_metrics(request):
 
-#     companions = Companion.objects.all()
-#     guests = Guest.objects.all()
+    companions = Companion.objects.all()
+    guests = Guest.objects.all()
 
-#     return HttpResponse()
+    confirmed_companions = [*filter(lambda x: x.confirmed == True, companions)]
+    confirmed_guests = [*filter(lambda x: x.confirmed == True, guests)]
+
+    confirmed = []
+    not_confirmed = []
+
+    for guest in guests:
+        guest_dict = {'name': guest.name, 'number': guest.cellphone}
+        if guest.confirmed:
+            confirmed.append(guest_dict)
+        else:
+            not_confirmed.append(guest_dict)
+
+    for companion in companions:
+        companion_dict = {
+            'name': companion.name,
+            'number': companion.guest.cellphone
+        }
+        if companion.confirmed:
+            confirmed.append(companion_dict)
+        else:
+            not_confirmed.append(companion_dict)
+
+    json_to_response = {
+        'total_invitados': len(companions) + len(guests),
+        'total_confirmados': len(confirmed_companions) + len(confirmed_guests),
+        'lista_confirmados': confirmed,
+        'lista_pendientes': not_confirmed,
+    }
+
+    return HttpResponse(json.dumps(json_to_response),
+                        content_type="application/json")

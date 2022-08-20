@@ -29,7 +29,11 @@ export class LoginComponent implements OnInit {
   }
 
   public login() {
-    this.centralService.checkUser(this.loginForm.controls.phone.value).subscribe((x) => {
+    let rawPhone = this.loginForm.controls.phone.value;
+
+    rawPhone = rawPhone.split(' ').join('');
+
+    this.centralService.checkUser(rawPhone).subscribe((x) => {
 
       this.router.navigate(['/inicio']);
     }

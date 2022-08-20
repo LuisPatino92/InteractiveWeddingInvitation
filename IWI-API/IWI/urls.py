@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from core.views import get_guest, confirm, set_guests
+from core.views import get_guest, confirm, set_guests, get_metrics
 
 urlpatterns = [
     path('api/admin/', admin.site.urls),
     path('api/getguest/', get_guest),
     path('api/confirm/', confirm),
     path('api/setguests/', set_guests),
+    path('api/comovamos/', get_metrics),
 ]
